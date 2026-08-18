@@ -1,10 +1,16 @@
 import Image from "next/image";
 
 const whatsappNumber = "923127460274";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 function ZameenLogo() {
   return (
-    <svg viewBox="0 0 135 27" className="h-full w-full" aria-label="Zameen logo" role="img">
+    <svg
+      viewBox="0 0 135 27"
+      className="h-full w-full"
+      aria-label="Zameen logo"
+      role="img"
+    >
       <g>
         <path
           fill="#231F20"
@@ -25,15 +31,37 @@ function ZameenLogo() {
 }
 
 export default function Home() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    name: "Usman Property and Builders",
+    url: siteUrl,
+    description:
+      "Property buying, selling, investment, and location guidance in Lahore, Pakistan.",
+    areaServed: "Lahore",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Lahore",
+      addressCountry: "PK",
+    },
+  };
+
   return (
     <main className="min-h-screen overflow-x-hidden bg-white text-slate-900">
       <header className="border-b border-slate-200">
         <div className="mx-auto flex h-16 max-w-[1680px] items-center px-4 sm:px-5 lg:px-6">
           <div className="h-7 w-[140px] sm:h-8 sm:w-[165px] lg:h-9 lg:w-[185px]">
-            <ZameenLogo />
+            <a href="https://www.zameen.com/" aria-label="Open Zameen website">
+              <ZameenLogo />
+            </a>
           </div>
         </div>
       </header>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
 
       <div className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-[1680px] flex-col gap-4 p-3 sm:p-4 lg:grid lg:grid-cols-[minmax(0,1.35fr)_420px] lg:gap-5 lg:p-5">
         <section className="flex min-h-0 flex-col gap-4 lg:gap-5">
@@ -65,13 +93,50 @@ export default function Home() {
                   </div>
 
                   <div className="mt-2.5 flex items-center gap-2 text-sm text-slate-500 sm:mt-3 sm:text-lg">
-                    <span className="text-emerald-500">●</span>
+                    <span className="text-emerald-500">-</span>
                     <span>Lahore, Pakistan</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <section
+            aria-labelledby="about-section"
+            className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5"
+          >
+            <h2
+              id="about-section"
+              className="text-[clamp(1.1rem,1.35vw,1.5rem)] font-semibold tracking-tight text-slate-900"
+            >
+              Property services in Lahore
+            </h2>
+            <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
+              Usman Property and Builders helps buyers, sellers, and investors
+              with residential plots, houses, and real estate opportunities in
+              Lahore. If you are searching for DHA Phase 1 property guidance,
+              investment support, or a trusted property consultant in Lahore,
+              this page is built to describe those services clearly for both
+              visitors and search engines.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2 text-xs font-medium text-slate-600 sm:text-sm">
+              {[
+                "Property buying",
+                "Property selling",
+                "Investment advice",
+                "DHA Lahore",
+                "Residential plots",
+                "House listings",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </section>
 
           <section className="flex min-h-0 flex-1 flex-col" id="agency-staff">
             <h2 className="mb-4 text-[clamp(1.35rem,1.6vw,1.9rem)] font-semibold tracking-tight">
@@ -108,7 +173,7 @@ export default function Home() {
               <a
                 href={`https://wa.me/${whatsappNumber}`}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="inline-flex h-12 flex-[1.4] items-center justify-center rounded-xl bg-emerald-500 px-4 text-sm font-medium text-white transition hover:bg-emerald-600 sm:h-14 sm:px-5 sm:text-lg"
               >
                 WhatsApp
