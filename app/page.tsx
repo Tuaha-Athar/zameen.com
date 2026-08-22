@@ -70,7 +70,7 @@ export default function Home() {
               id="description"
               className="flex min-h-[180px] flex-col justify-between gap-4 rounded-2xl bg-[radial-gradient(circle_at_20%_20%,rgba(16,185,129,0.08),transparent_28%),radial-gradient(circle_at_80%_0%,rgba(16,185,129,0.06),transparent_22%),linear-gradient(135deg,rgba(255,255,255,0.92),rgba(236,253,245,0.95))] p-4 sm:min-h-[190px] sm:p-5 md:flex-row md:items-start"
             >
-              <div className="sm:flex flex-row items-start gap-7 sm:gap-5">
+              <div className="flex items-start gap-4 sm:gap-5">
                 <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-2xl bg-slate-900 shadow-md sm:h-28 sm:w-28">
                   <Image
                     src="/hero-section.png"
