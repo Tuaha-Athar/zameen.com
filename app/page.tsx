@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const whatsappNumber = "923002191908";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://zameen-com-chi.vercel.app/";
 
 function ZameenLogo() {
   return (
@@ -70,7 +70,7 @@ export default function Home() {
               id="description"
               className="flex min-h-[180px] flex-col justify-between gap-4 rounded-2xl bg-[radial-gradient(circle_at_20%_20%,rgba(16,185,129,0.08),transparent_28%),radial-gradient(circle_at_80%_0%,rgba(16,185,129,0.06),transparent_22%),linear-gradient(135deg,rgba(255,255,255,0.92),rgba(236,253,245,0.95))] p-4 sm:min-h-[190px] sm:p-5 md:flex-row md:items-start"
             >
-              <div className="flex items-start gap-4 sm:gap-5">
+              <div className="sm:flex flex-row items-start gap-7 sm:gap-5">
                 <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-2xl bg-slate-900 shadow-md sm:h-28 sm:w-28">
                   <Image
                     src="/hero-section.png"
@@ -85,7 +85,7 @@ export default function Home() {
                 <div className="pt-0.5 sm:pt-1">
                   <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                     <h1 className="text-[clamp(1.55rem,2.2vw,2.5rem)] font-semibold leading-[1.05] tracking-tight">
-                      Usman Property and Builders
+                      Malik Amir Awan From Usman Property & Builder
                     </h1>
                     <span className="inline-flex h-7 items-center rounded-sm bg-emerald-500 px-2.5 text-[11px] font-semibold tracking-wide text-white sm:h-8 sm:px-3 sm:text-sm">
                       FREE
@@ -160,6 +160,12 @@ export default function Home() {
                 <div className="text-[clamp(1.1rem,1.35vw,1.45rem)] font-semibold text-slate-800">
                   Amir Awan
                 </div>
+                <a
+                  href={`tel:+${whatsappNumber}`}
+                  className="mt-2 inline-flex items-center justify-center text-sm font-medium text-emerald-600 transition hover:text-emerald-700 sm:text-base"
+                >
+                  +92 300 2191908
+                </a>
               </div>
             </div>
 
