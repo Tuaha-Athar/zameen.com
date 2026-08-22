@@ -37,7 +37,7 @@ export default function Home() {
     name: "Usman Property and Builders",
     url: siteUrl,
     description:
-      "Property buying, selling, investment, and location guidance in Lahore, Pakistan.",
+      "Property buying, selling, investment, and location guidance in Lahore, near Luna Phase 6, Pakistan.",
     areaServed: "Lahore",
     address: {
       "@type": "PostalAddress",
@@ -94,7 +94,7 @@ export default function Home() {
 
                   <div className="mt-2.5 flex items-center gap-2 text-sm text-slate-500 sm:mt-3 sm:text-lg">
                     <span className="text-emerald-500">-</span>
-                    <span>Lahore, Pakistan</span>
+                    <span>Lahore, near Luna Phase 6</span>
                   </div>
                 </div>
               </div>
@@ -114,7 +114,7 @@ export default function Home() {
             <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
               Usman Property and Builders helps buyers, sellers, and investors
               with residential plots, houses, and real estate opportunities in
-              Lahore. If you are searching for DHA Phase 1 property guidance,
+              Lahore near Luna Phase 6. If you are searching for nearby property guidance,
               investment support, or a trusted property consultant in Lahore,
               this page is built to describe those services clearly for both
               visitors and search engines.
@@ -191,7 +191,7 @@ export default function Home() {
                     Location
                   </p>
                   <h3 className="mt-1 text-[clamp(1rem,1.2vw,1.25rem)] font-semibold sm:text-xl">
-                    DHA Phase 1, Lahore
+                    Lahore, near Luna Phase 6
                   </h3>
                 </div>
                 <div className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700 sm:text-sm">
@@ -202,16 +202,16 @@ export default function Home() {
 
             <div className="min-h-[320px] flex-1 bg-slate-100 sm:min-h-[420px] lg:min-h-0">
               <iframe
-                title="DHA Phase 1 Lahore map"
+                title="Lahore near Luna Phase 6 map"
                 className="h-full w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=DHA%20Phase%201%20Lahore&output=embed"
+                src="https://www.google.com/maps?q=Luna%20Phase%206%20Lahore&output=embed"
               />
             </div>
 
             <div className="border-t border-slate-200 bg-slate-50 px-4 py-3 sm:px-5 sm:py-4">
-              <p className="text-sm text-slate-600">DHA Phase 1, Lahore</p>
+              <p className="text-sm text-slate-600">Lahore, near Luna Phase 6</p>
             </div>
           </div>
         </aside>

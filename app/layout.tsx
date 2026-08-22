@@ -10,13 +10,13 @@ export const metadata: Metadata = {
     template: "%s | Usman Property and Builders",
   },
   description:
-    "Usman Property and Builders helps with property buying, selling, investment, and location guidance in Lahore, including DHA Phase 1.",
+    "Usman Property and Builders helps with property buying, selling, investment, and location guidance in Lahore, near Luna Phase 6.",
   keywords: [
     "Usman Property and Builders",
     "property dealer Lahore",
     "property consultant Lahore",
     "real estate Lahore",
-    "DHA Phase 1 Lahore",
+    "Luna Phase 6 Lahore",
     "house for sale Lahore",
     "plot for sale Lahore",
     "investment property Lahore",
@@ -29,14 +29,14 @@ export const metadata: Metadata = {
     url: "/",
     title: "Usman Property and Builders | Lahore Property Consultants",
     description:
-      "Property buying, selling, and investment guidance in Lahore with a focus on DHA Phase 1.",
+      "Property buying, selling, and investment guidance in Lahore with a focus on Luna Phase 6.",
     siteName: "Usman Property and Builders",
   },
   twitter: {
     card: "summary_large_image",
     title: "Usman Property and Builders | Lahore Property Consultants",
     description:
-      "Property buying, selling, and investment guidance in Lahore with a focus on DHA Phase 1.",
+      "Property buying, selling, and investment guidance in Lahore with a focus on Luna Phase 6.",
   },
   robots: {
     index: true,
