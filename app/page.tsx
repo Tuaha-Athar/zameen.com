@@ -200,7 +200,7 @@ export default function Home() {
               <div className="flex h-40 items-center justify-center bg-[radial-gradient(circle_at_30%_20%,rgba(148,163,184,0.12),transparent_22%),linear-gradient(180deg,rgba(248,250,252,0.95),rgba(255,255,255,1))] sm:h-44">
                 <div className="relative h-24 w-24 overflow-hidden rounded-full bg-slate-100 shadow-sm ring-4 ring-white sm:h-28 sm:w-28">
                   <Image
-                    src="/malik-amir.jpeg"
+                    src="/avatar.jpg"
                     alt="Amir Awan"
                     fill
                     sizes="(max-width: 640px) 96px, 112px"
