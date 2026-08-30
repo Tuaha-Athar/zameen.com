@@ -3,6 +3,60 @@ import Image from "next/image";
 const whatsappNumber = "923002191908";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://zameen-com-chi.vercel.app/";
 
+const socialLinks = {
+  youtube: "https://youtube.com/@dha.specialist01?si=IogbZ8JjQMDYPj_5",
+  facebook: "https://www.facebook.com/share/p/1E5UevSDXe/",
+  tiktok: "https://www.tiktok.com/@dha.specialist01?_r=1&_t=ZS-99CqwpLUabF",
+};
+
+function SocialIcon({ type }: { type: "youtube" | "facebook" | "tiktok" }) {
+  if (type === "youtube") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-current">
+        <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.9V8.1l6.5 3.9-6.5 3.9Z" />
+      </svg>
+    );
+  }
+
+  if (type === "facebook") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-current">
+        <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.7-1.6h1.8V3.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.3 1.6-4.3 4.4V10H7.3v3h2.8v8h3.4Z" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-current">
+      <path d="M14.2 3c.2 1.7 1.1 2.8 2.8 3v2.8c-1.5-.1-2.7-.5-3.8-1.3v6.2c0 3.7-2.1 5.9-5.4 5.9-3 0-5.2-2-5.2-4.8 0-3 2.4-5.2 5.7-5.2.3 0 .6 0 .9.1v2.9a4 4 0 0 0-.9-.1c-1.5 0-2.7.9-2.7 2.3 0 1.2.9 2 2.2 2 1.5 0 2.3-1 2.3-2.8V3h4.1Z" />
+    </svg>
+  );
+}
+
+function SocialLink({
+  href,
+  label,
+  type,
+}: {
+  href: string;
+  label: string;
+  type: "youtube" | "facebook" | "tiktok";
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Open ${label}`}
+      title={`Open ${label}`}
+      className="group inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-3 text-sm font-medium text-slate-600 transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-200 hover:bg-emerald-50 hover:text-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
+    >
+      <SocialIcon type={type} />
+      <span>{label}</span>
+    </a>
+  );
+}
+
 function ZameenLogo() {
   return (
     <svg
@@ -47,14 +101,13 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-white text-slate-900">
-      <header className="border-b border-slate-200">
+    <main className="min-h-screen overflow-x-hidden bg-white text-slate-900 antialiased">
+      <header className="border-b border-slate-200 bg-white/95 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-[1680px] items-center px-4 sm:px-5 lg:px-6">
           <div className="h-7 w-[140px] sm:h-8 sm:w-[165px] lg:h-9 lg:w-[185px]">
-            <a href="https://www.zameen.com/" aria-label="Open Zameen website">
+          
               <ZameenLogo />
-            </a>
-          </div>
+                    </div>
         </div>
       </header>
 
@@ -84,7 +137,7 @@ export default function Home() {
 
                 <div className="pt-0.5 sm:pt-1">
                   <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-                    <h1 className="text-[clamp(1.55rem,2.2vw,2.5rem)] font-semibold leading-[1.05] tracking-tight">
+                    <h1 className="max-w-3xl text-[clamp(1.55rem,2.2vw,2.5rem)] font-semibold leading-[1.05] tracking-tight">
                       Malik Amir Awan From Usman Property & Builder
                     </h1>
                     <span className="inline-flex h-7 items-center rounded-sm bg-emerald-500 px-2.5 text-[11px] font-semibold tracking-wide text-white sm:h-8 sm:px-3 sm:text-sm">
@@ -169,21 +222,43 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-4 flex w-full max-w-[420px] gap-3 sm:mt-5">
-              <a
-                href="mailto:info@example.com"
-                className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-xl bg-emerald-50 px-4 text-sm font-medium text-emerald-600 transition hover:bg-emerald-100 sm:h-14 sm:px-5 sm:text-lg"
-              >
-                Email
-              </a>
-              <a
-                href={`https://wa.me/${whatsappNumber}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-12 flex-[1.4] items-center justify-center rounded-xl bg-emerald-500 px-4 text-sm font-medium text-white transition hover:bg-emerald-600 sm:h-14 sm:px-5 sm:text-lg"
-              >
-                WhatsApp
-              </a>
+            <div className="mt-4 w-full max-w-[420px] sm:mt-5">
+              <div className="flex gap-3">
+                <a
+                  href={`tel:+${whatsappNumber}`}
+                  aria-label="Call Amir Awan"
+                  className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 text-sm font-medium text-slate-700 transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-200 hover:bg-emerald-50 hover:text-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 sm:h-14 sm:text-base"
+                >
+                  Call
+                </a>
+                <a
+                  href={`https://wa.me/${whatsappNumber}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Contact Amir Awan on WhatsApp"
+                  className="inline-flex h-12 flex-[1.4] items-center justify-center gap-2 rounded-xl bg-emerald-500 px-4 text-sm font-medium text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 sm:h-14 sm:text-base"
+                >
+                  WhatsApp
+                </a>
+              </div>
+
+              <div className="mt-3 grid grid-cols-3 gap-2" aria-label="Social media links">
+                <SocialLink
+                  href={socialLinks.youtube}
+                  label="YouTube"
+                  type="youtube"
+                />
+                <SocialLink
+                  href={socialLinks.facebook}
+                  label="Facebook"
+                  type="facebook"
+                />
+                <SocialLink
+                  href={socialLinks.tiktok}
+                  label="TikTok"
+                  type="tiktok"
+                />
+              </div>
             </div>
           </section>
         </section>
